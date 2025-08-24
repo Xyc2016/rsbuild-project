@@ -32,7 +32,7 @@ steps:
     commands:
       - echo "$KUBE_CA_CERT" > /tmp/ca.crt
       - kubectl --server=$KUBE_SERVER --token=$KUBE_TOKEN --certificate-authority=/tmp/ca.crt get deployment
-      - kubectl --server=$KUBE_SERVER --token=$KUBE_TOKEN --certificate-authority=/tmp/ca.crt set image deployment/fstack-fe fstack-fe-dist=192.168.49.2:5000/fstack-fe:${DRONE_COMMIT_SHA:0:8}
+      - kubectl --server=$KUBE_SERVER --token=$KUBE_TOKEN --certificate-authority=/tmp/ca.crt set image deployment/fstack-fe fstack-fe=192.168.49.2:5000/fstack-fe:${DRONE_COMMIT_SHA:0:8}
     environment:
       KUBE_SERVER: https://kubernetes.default.svc
       KUBE_TOKEN:

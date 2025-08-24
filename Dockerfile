@@ -10,5 +10,6 @@ COPY . .
 
 RUN pnpm build
 
-FROM alpine:3
-COPY --from=builder /app/dist /app/dist
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+
