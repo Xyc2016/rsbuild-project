@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="content">
       <h1>Rsbuild with React</h1>
-      <h1>CI/CD TEST</h1>
+      <h1>Release 0826</h1>
       {greeting && <p>{greeting}</p>}
       <p>Start building amazing things with Rsbuild.</p>
     </div>
